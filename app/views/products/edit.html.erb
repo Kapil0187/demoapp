@@ -1,0 +1,9 @@
+<h1 class="text-3xl font-bold text-gray-800 mb-6">Edit Product</h1>
+
+<div class="max-w-lg bg-white rounded-xl shadow-md p-6">
+  <%= render "form", product: @product %>
+
+  <div class="mt-4">
+    <%= link_to "Cancel", @product, class: "inline-block text-sm font-medium text-gray-600 hover:text-gray-900 underline" %>
+  </div>
+</div>

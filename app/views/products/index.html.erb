@@ -1,0 +1,12 @@
+<h1 class="text-3xl font-bold text-gray-800 mb-10">Products</h1>
+
+<div id="products" class="flex flex-col gap-6 overflow-x-auto pb-4">
+  <% @products.each do |product| %>
+    <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6 min-w-[250px] sm:min-w-[300px] lg:min-w-[350px]">
+      <%= link_to product, class: "block text-xl font-semibold text-indigo-600 hover:text-indigo-800" do %>
+        <%= product.name %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<%= link_to "New Product", new_product_path %>
