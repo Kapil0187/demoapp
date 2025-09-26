@@ -33,6 +33,7 @@ class ProductsController < ApplicationController
     end
 
     def update
+        @product.assign_attributes(get_params)
         if @product.save
             redirect_to @product
         else
